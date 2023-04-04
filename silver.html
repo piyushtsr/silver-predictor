@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Silver Predictor</title>
+    <style>body {
+      font-family: Trebuchet MS,Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Style for the form element */
+    form {
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+    }
+    
+    /* Style for the select elements */
+    select {
+      display: block;
+      margin: 10px 0;
+      padding: 5px;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #333333;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+    }
+    
+    /* Style for the label elements */
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    /* Style for the submit button */
+    input[type="submit"] {
+      display: block;
+      margin: 20px 0 0 0;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #336699;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    /* Style for the option elements */
+    option {
+      padding: 5px;
+    }
+    #result{
+      border-style: none;
+    }
+    </style>
+  </head>
+  <body>
+    <form>
+
+      <label for="nakshatra">Nakshatra:</label>
+  <select id="nakshatra" name="nakshatra">
+    <option value="0">Select an option</option>
+    <option value="10">Ashwini (10)</option>
+    <option value="10">Bharani (10)</option>
+    <option value="96">Krittika (96)</option>
+    <option value="56">Rohini (56)</option>
+    <option value="20">Murgshir (20)</option>
+    <option value="86">Bhadra (86)</option>
+    <option value="21">Purnavasu (21)</option>
+    <option value="64">Pushya (64)</option>
+    <option value="135">Ashlesha (135)</option>
+    <option value="150">Magha (150)</option>
+    <option value="220">Purva Phalguni (220)</option>
+    <option value="72">Uttara Phalguni (72)</option>
+    <option value="334">Hasta (334)</option>
+    <option value="21">Chitra (21)</option>
+    <option value="210">Swati (210)</option>
+    <option value="320">Vishakha (320)</option>
+    <option value="493">Anuradha (493)</option>
+    <option value="559">Jyeshta (559)</option>
+    <option value="552">Mula (552)</option>
+    <option value="142">Purvashada (142)</option>
+    <option value="420">Uttarshada (420)</option>
+    <option value="550">Shravana (550)</option>
+    <option value="736">Dhanishta (736)</option>
+    <option value="576">Shatbhisha (576)</option>
+    <option value="275">Purva Bhadrapada (275)</option>
+    <option value="126">Uttara Bhadrapada (126)</option>
+    <option value="256">Revati (256)</option>
+  </select>
+
+
+<label for="tithi">Tithi:</label>
+<select id="tithi" name="tithi">
+  <option value="0">Select an option</option>
+  <option value="18">Pratipada (18)</option>
+  <option value="20">Dwitiya (20)</option>
+  <option value="22">Trutiya (22)</option>
+  <option value="24">Chathurti (24)</option>
+  <option value="26">Panchmi (26)</option>
+  <option value="25">Sashti (25)</option>
+  <option value="23">Saptmi (23)</option>
+  <option value="21">Ashtmi (21)</option>
+  <option value="19">Navmi (19)</option>
+  <option value="17">Dashmi (17)</option>
+  <option value="15">Ekadashi (15)</option>
+  <option value="13">Dwadashi (13)</option>
+  <option value="11">Trayodashi (11)</option>
+  <option value="9">Chaturdashi (9)</option>
+  <option value="16">Purnima (16)</option>
+  <option value="7">Amavasa (7)</option>
+</select>
+
+
+<label for="vaar">Vaar:</label>
+<select id="vaar" name="vaar">
+  <option value="0">Select an option</option>
+  <option value="40">Ravi (40)</option>
+  <option value="50">Som (50)</option>
+  <option value="57">Mangal (57)</option>
+  <option value="72">Budhwar (72)</option>
+  <option value="65">Guruwar (65)</option>
+  <option value="24">Shukrawar (24)</option>
+  <option value="14">Shani (14)</option>
+</select>
+
+
+
+<label for="sankranti">Sankranti:</label>
+<select id="sankranti" name="sankranti">
+  <option value="0">Select an option</option>
+  <option value="37">Mesha (37)</option>
+  <option value="84">Vrushabha (84)</option>
+  <option value="66">Mithuna (66)</option>
+  <option value="109">Karka (109)</option>
+  <option value="125">Simha (125)</option>
+  <option value="102">Kanya (102)</option>
+  <option value="140">Tula (140)</option>
+  <option value="144">Vrushika (144)</option>
+  <option value="144">Dhanu (144)</option>
+  <option value="198">Makar (198)</option>
+  <option value="190">Kumbha (190)</option>
+  <option value="180">Meena (180)</option>
+</select>
+
+
+<label for="maas">Maas:</label>
+<select id="maas" name="maas">
+  <option value="0">Select an option</option>
+  <option value="61">Chaitra (61)</option>
+  <option value="63">Vaishakha (63)</option>
+  <option value="65">Jyeshtha (65)</option>
+  <option value="67">Ashana (67)</option>
+  <option value="61">Shravana (61)</option>
+  <option value="71">Bhadrapada (71)</option>
+  <option value="73">Ashwin (73)</option>
+  <option value="51">Kartik (51)</option>
+  <option value="53">Margshish (53)</option>
+  <option value="55">Posh (55)</option>
+  <option value="57">Magh (57)</option>
+  <option value="59">Falgun (59)</option>
+</select>
+
+
+<label for="yoga">Yoga:</label>
+<select id="yoga" name="yoga">
+  <option value="0">Select an option</option>
+  <option value="13">Vishkumbh (13)</option>
+  <option value="17">Priti (17)</option>
+  <option value="48">Ayushman (48)</option>
+  <option value="9">Saubhagya (9)</option>
+  <option value="36">Shoman (36)</option>
+  <option value="47">Atishan (47)</option>
+  <option value="13">Sukarma (13)</option>
+  <option value="44">Dhruti (44)</option>
+  <option value="13">Shula (13)</option>
+  <option value="25">Gann (25)</option>
+  <option value="17">Buddhi (17)</option>
+  <option value="22">Dhruv (22)</option>
+  <option value="15">Vyaghat (15)</option>
+  <option value="14">Harshad (14)</option>
+  <option value="19">Vajra (19)</option>
+  <option value="23">Siddhi (23)</option>
+  <option value="39">Vyatipata (39)</option>
+  <option value="15">Variyan (15)</option>
+  <option value="13">Parigha (13)</option>
+  <option value="19">Shiva (19)</option>
+  <option value="25">Siddha (25)</option>
+  <option value="48">Sadhya (48)</option>
+  <option value="88">Shubh (88)</option>
+  <option value="12">Shukla (12)</option>
+  <option value="12">Bramha (12)</option>
+  <option value="27">Indra (27)</option>
+  <option value="23">Vedhruti (23)</option>
+</select>
+
+
+
+      <label for="place">Place:</label>
+<select id="place" name="place">
+  <option value="0">Select an option</option>
+  <option value="136">Delhi (136)</option>
+  <option value="198">Mumbai (198)</option>
+  <option value="1234">New York (1234)</option>
+  <option value="249">Kolkata (249)</option>
+  <option value="939">London (939)</option>
+  <option value="3254">Russia (3254)</option>
+  <option value="342">China (342)</option>
+  <option value="3332">America (3332)</option>
+</select>
+      <br><br>
+  <button type="button" onclick="calculateSum()">Calculate Sum</button>
+  <br><br>
+  <label for="result">Result:</label>
+  <input type="text" id="result" name="result" readonly>
+</form>
+
+<script>
+  function calculateSum() {
+    var nakshatraValue = parseInt(document.getElementById("nakshatra").value);
+    var tithiValue = parseInt(document.getElementById("tithi").value);
+    var vaarValue = parseInt(document.getElementById("vaar").value);
+    var sankrantiValue = parseInt(document.getElementById("sankranti").value);
+    var maasValue = parseInt(document.getElementById("maas").value);
+    var yogaValue = parseInt(document.getElementById("yoga").value);
+    var placeValue = parseInt(document.getElementById("place").value);
+    var sum = nakshatraValue + tithiValue + vaarValue + sankrantiValue + maasValue + yogaValue + placeValue;
+    document.getElementById("result").value = `Total:${sum} and Remainder ${sum%9}`;
+  }
+</script>
+  </body>
+</html>
